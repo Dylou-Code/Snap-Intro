@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/resources/scss/app.scss">
+    <title>Vite App</title>
+</head>
+<body>
+<header class="primary-header test">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="#"><img src="./resources/assets/images/logo.svg" alt="Manage"></a>
+            <!--aria expanded est false car la navigation est fermer quand le visiteur est la-->
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <!--aria-hidden pour dire qu'il ne faut pas s'en occuper -->
+                <img class="icon-hamburger" src="./resources/images/icon-close-menu.svg" aria-hidden="true" alt="">
+                <img class="icon-close" src="./resources/images/icon-close.svg" alt="">
+                <!--la span est pour l'accesibilité-->
+                <span class="visually-hidden">menu</span>
+            </button>
+            <nav class="navigation">
+                <ul class="navigation__dropdown">
+                    <li><a href="#" aria-haspopup="true">Features</a>
+                        <ul class="navigation__dropdown-list" role="list" aria-label="submenu">
+                            <li><a href="#">
+                                    <img src="/resources/assets/images/icon-todo.svg">
+                                    Todo List
+                                </a>
+                            </li>
+                            <li><a href="#">
+                                <img src="/resources/assets/images/icon-todo.svg">
+                                Calendar
+                            </a>
+                            </li>
+                            <li><a href="#">
+                                <img src="/resources/assets/images/icon-todo.svg">
+                                Reminder
+                            </a>
+                            </li>
+                            <li><a href="#">
+                                <img src="/resources/assets/images/icon-todo.svg">
+                                Planning
+                            </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#" aria-haspopup="true">Company</a>
+                        <ul class="navigation__dropdown-list" role="list" aria-label="submenu">
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+                <ul aria-label="primary" role="list" class="nav-list" id="primary-navigation">
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn | display-sm-none display-md-inline-flex">login</a>
+            <a href="#" class="btn btn-outline | display-sm-none display-md-inline-flex">Register</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero">
+                <div class="hero__left">
+                    <h1 class="hero__title">Make Remote Work</h1>
+                    <p class="hero__subtitle">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+                    <button class="btn btn-outline">learn more</button>
+                    <div class="hero__logo">
+                        <img src="./resources/assets/images/client-databiz.svg" alt="">
+                        <img src="./resources/assets/images/client-audiophile.svg" alt="">
+                        <img src="./resources/assets/images/client-meet.svg" alt="">
+                        <img src="./resources/assets/images/client-maker.svg" alt="">
+                    </div>
+
+                </div>
+                <div class="hero__right">
+                    <picture >
+                        <source srcset="./resources/assets/images/image-hero-mobile.png" media="(max-width: 767px)">
+                        <img class="presentation__picture-img" src="./resources/assets/images/image-hero-desktop.png" alt="" >
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script type="module" src="/main.js"></script>
+</body>
+</html>
