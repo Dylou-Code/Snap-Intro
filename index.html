@@ -4,60 +4,100 @@
     <meta charset="UTF-8"/>
     <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/resources/scss/app.scss">
     <title>Vite App</title>
 </head>
 <body>
-<header class="primary-header test">
+<header class="header">
     <div class="container">
-        <div class="nav-wrapper">
-            <a href="#"><img src="./resources/assets/images/logo.svg" alt="Manage"></a>
-            <!--aria expanded est false car la navigation est fermer quand le visiteur est la-->
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+        <div class="navigation__container">
+            <a href="#"><img src="./resources/assets/images/logo.svg" alt="Snap"></a>
+          <!--  aria expanded est false car la navigation est fermer quand le visiteur est la-->
+            <button class="navigation__mobile-toggle" aria-controls="primary-navigation" id="icons" aria-expanded="false">
                 <!--aria-hidden pour dire qu'il ne faut pas s'en occuper -->
-                <img class="icon-hamburger" src="./resources/images/icon-close-menu.svg" aria-hidden="true" alt="">
-                <img class="icon-close" src="./resources/images/icon-close.svg" alt="">
-                <!--la span est pour l'accesibilité-->
-                <span class="visually-hidden">menu</span>
+                <img class="navigation__mobile-hamburger" src="./resources/assets/images/icon-menu.svg" aria-hidden="true" alt="">
+                <!--<img class="navigation__mobile-close" src="./resources/assets/images/icon-close-menu.svg" alt="">-->
+               <!--;la span est pour l'accesibilité-->
+                <span class="hidden">menu</span>
             </button>
             <nav class="navigation">
-                <ul class="navigation__dropdown">
-                    <li><a href="#" aria-haspopup="true">Features</a>
+                <ul class="navigation__dropdown"  aria-label="primary" role="list"  id="primary-navigation">
+                    <li>
+                        <div class="navigation__dropdown-title">
+                            <a href="#" aria-haspopup="true">Features</a>
+                            <div class="navigation__dropdown-icon" id="dropdown-icon">
+                                <img src="/resources/assets/images/icon-arrow-down.svg">
+                            </div>
+
+                        </div>
+
                         <ul class="navigation__dropdown-list" role="list" aria-label="submenu">
-                            <li><a href="#">
+                            <li><a href="#" class="navigation__dropdown-link">
                                     <img src="/resources/assets/images/icon-todo.svg">
                                     Todo List
                                 </a>
                             </li>
-                            <li><a href="#">
-                                <img src="/resources/assets/images/icon-todo.svg">
+                            <li><a href="#" class="navigation__dropdown-link">
+                                <img src="/resources/assets/images/icon-calendar.svg">
                                 Calendar
                             </a>
                             </li>
-                            <li><a href="#">
-                                <img src="/resources/assets/images/icon-todo.svg">
+                            <li><a href="#" class="navigation__dropdown-link">
+                                <img src="/resources/assets/images/icon-reminders.svg">
                                 Reminder
                             </a>
                             </li>
-                            <li><a href="#">
-                                <img src="/resources/assets/images/icon-todo.svg">
+                            <li><a href="#" class="navigation__dropdown-link">
+                                <img src="/resources/assets/images/icon-planning.svg">
                                 Planning
                             </a>
                             </li>
 
                         </ul>
                     </li>
-                    <li><a href="#" aria-haspopup="true">Company</a>
+                    <li>
+                        <div class="navigation__dropdown-title">
+                            <a href="#" aria-haspopup="true">Company</a>
+                            <div class="navigation__dropdown-icon">
+                                <img src="/resources/assets/images/icon-arrow-down.svg">
+                            </div>
+                        </div>
                         <ul class="navigation__dropdown-list" role="list" aria-label="submenu">
-                            <li><a href="#">History</a></li>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <li><a href="#" class="navigation__dropdown-link">History</a></li>
+                            <li><a href="#" class="navigation__dropdown-link">Our Team</a></li>
+                            <li><a href="#" class="navigation__dropdown-link">Blog</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">About</a></li>
                 </ul>
-                <ul aria-label="primary" role="list" class="nav-list" id="primary-navigation">
+                <div class="navigation__cta" style="max-width: 100%">
+                    <button class="btn"><a href="#">Login</a></button>
+                    <button class="btn btn-outline"><a href="#">Register</a></button>
+                </div>
+
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!--<header class="primary-header">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="#"><img src="./images/logo.svg" alt="Manage"></a>
+            &lt;!&ndash;aria expanded est false car la navigation est fermer quand le visiteur est la&ndash;&gt;
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                &lt;!&ndash;aria-hidden pour dire qu'il ne faut pas s'en occuper &ndash;&gt;
+                <img class="icon-hamburger" src="./images/icon-hamburger.svg" aria-hidden="true" alt="">
+                <img class="icon-close" src="./images/icon-close.svg" alt="">
+                &lt;!&ndash;la span est pour l'accesibilité&ndash;&gt;
+                <span class="visually-hidden">menu</span>
+            </button>
+            <nav class="primary-navigation">
+                <ul aria-label="primary" role="list" class="nav-list"  id="primary-navigation">
                     <li><a href="#">Pricing</a></li>
                     <li><a href="#">Product</a></li>
                     <li><a href="#">About Us</a></li>
@@ -65,14 +105,13 @@
                     <li><a href="#">Community</a></li>
                 </ul>
             </nav>
-            <a href="#" class="btn | display-sm-none display-md-inline-flex">login</a>
-            <a href="#" class="btn btn-outline | display-sm-none display-md-inline-flex">Register</a>
+            <button class="button | display-sm-none display-md-inline-flex">Get Started</button>
         </div>
     </div>
-</header>
+</header>-->
 
 <main>
-    <section class="hero-section">
+    <section class="hero-section ">
         <div class="container">
             <div class="hero">
                 <div class="hero__left">
@@ -98,6 +137,6 @@
     </section>
 </main>
 
-<script type="module" src="/main.js"></script>
+<script type="module" defer src="/main.js"></script>
 </body>
 </html>

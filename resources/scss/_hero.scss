@@ -1,0 +1,10 @@
+.header[data-overlay]::before {
+  content: "";
+  position: fixed;
+  height: 100vh;
+  inset: 0;
+  background-color: black;
+  opacity: 0.6;
+}
+
+

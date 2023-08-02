@@ -1,0 +1,107 @@
+:root {
+  /*Neutral*/
+  --clr-neutral-500: hsl(0, 0%, 98%);
+  --clr-neutral-600:  hsl(0, 0%, 41%);
+  --clr-neutral-700:  hsl(198, 0%, 8%);
+
+  /*Font*/
+  --ff-primary : 'Epilogue', sans-serif;
+  --ff-body: var(--ff-primary);
+  --ff-accent: var(--ff-primary);
+
+  /*font-weight*/
+  --fw-regular : 500;
+  --fw-bold : 700;
+
+  /*Font-size*/
+  /*Base 18px*/
+  --fs-300 : 0.778rem;/*14*/
+  --fs-400 : 0.889rem; /*16px*/
+  --fs-500 :1rem; /*18px*/
+  --fs-600 : 2rem; /*36*/
+  --fs-700 :4.444rem;/*80*/
+
+  /*Fonts variables*/
+  --fs-body: var(--fs-500);
+  --fs-primary-heading: var(--fs-700);
+  --fs-text: var(--fs-600);
+  --fs-nav: var(--fs-400);
+
+  /*spacing*/
+  --space-300: 0.778rem ;/*14*/
+  --space-400: 1.5rem ;/*16*/
+  --space-500: 1.5rem ;/*24*/
+  --space-600: 2rem;/*40*/
+  --space-700: 2.5rem;/*48*/
+}
+
+@mixin reset-list {
+  list-style: none;
+}
+
+@mixin horizontal-list {
+  @include reset-list;
+}
+
+nav ul {
+  @include horizontal-list;
+}
+
+body {
+  font-size: var(--fs-body);
+  font-family: var(--ff-primary);
+}
+
+.btn {
+  padding: 12px 43px;
+  background: none;
+  border-radius: 14px;
+  border: none;
+}
+
+.btn-outline {
+  border: solid 2px var(--clr-neutral-700);
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-neutral-700);
+}
+
+@media screen and (min-width: 768px)  {
+  .container {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+}
+
+@media screen and (min-width: 1024px)  {
+  .container {
+    margin: 0 auto;
+    width: 992px;
+  }
+}
+
+@media screen and (min-width: 1200px)  {
+    .container {
+      width: 1024px;
+    }
+}
+
+@media screen and (min-width: 1200px)  {
+  .container {
+    width: 1200px;
+  }
+}
+
+
+
