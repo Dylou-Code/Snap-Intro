@@ -14,7 +14,7 @@
 <header class="header">
     <div class="container">
         <div class="navigation__container">
-            <a href="#"><img src="./resources/assets/images/logo.svg" alt="Snap"></a>
+            <a href="#" class="navigation__logo"><img src="./resources/assets/images/logo.svg" alt="Snap"></a>
           <!--  aria expanded est false car la navigation est fermer quand le visiteur est la-->
             <button class="navigation__mobile-toggle" aria-controls="primary-navigation" id="icons" aria-expanded="false">
                 <!--aria-hidden pour dire qu'il ne faut pas s'en occuper -->
@@ -24,62 +24,67 @@
                 <span class="hidden">menu</span>
             </button>
             <nav class="navigation">
-                <ul class="navigation__dropdown"  aria-label="primary" role="list"  id="primary-navigation">
-                    <li>
-                        <div class="navigation__dropdown-title">
-                            <a href="#" aria-haspopup="true">Features</a>
-                            <div class="navigation__dropdown-icon" id="dropdown-icon">
-                                <img src="/resources/assets/images/icon-arrow-down.svg">
+                <div class="navigation__link">
+                    <a href="#" class="navigation__logo navigation__logo--primary"><img src="./resources/assets/images/logo.svg" alt="Snap"></a>
+                    <ul class="navigation__dropdown"  aria-label="primary" role="list"  id="primary-navigation">
+                        <li class="navigation__dropdown-item">
+                            <div class="navigation__dropdown-title">
+                                <a href="#" aria-haspopup="true">Features</a>
+                                <div class="navigation__dropdown-icon" id="dropdown-icon">
+                                    <img src="/resources/assets/images/icon-arrow-down.svg">
+                                </div>
+
                             </div>
 
-                        </div>
-
-                        <ul class="navigation__dropdown-list" role="list" aria-label="submenu">
-                            <li><a href="#" class="navigation__dropdown-link">
+                            <ul class="navigation__dropdown-list" role="list" aria-label="submenu">
+                                <li><a href="#" class="navigation__dropdown-link">
                                     <img src="/resources/assets/images/icon-todo.svg">
                                     Todo List
                                 </a>
-                            </li>
-                            <li><a href="#" class="navigation__dropdown-link">
-                                <img src="/resources/assets/images/icon-calendar.svg">
-                                Calendar
-                            </a>
-                            </li>
-                            <li><a href="#" class="navigation__dropdown-link">
-                                <img src="/resources/assets/images/icon-reminders.svg">
-                                Reminder
-                            </a>
-                            </li>
-                            <li><a href="#" class="navigation__dropdown-link">
-                                <img src="/resources/assets/images/icon-planning.svg">
-                                Planning
-                            </a>
-                            </li>
+                                </li>
+                                <li><a href="#" class="navigation__dropdown-link">
+                                    <img src="/resources/assets/images/icon-calendar.svg">
+                                    Calendar
+                                </a>
+                                </li>
+                                <li><a href="#" class="navigation__dropdown-link">
+                                    <img src="/resources/assets/images/icon-reminders.svg">
+                                    Reminder
+                                </a>
+                                </li>
+                                <li><a href="#" class="navigation__dropdown-link">
+                                    <img src="/resources/assets/images/icon-planning.svg">
+                                    Planning
+                                </a>
+                                </li>
 
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="navigation__dropdown-title">
-                            <a href="#" aria-haspopup="true">Company</a>
-                            <div class="navigation__dropdown-icon">
-                                <img src="/resources/assets/images/icon-arrow-down.svg">
+                            </ul>
+                        </li>
+                        <li class="navigation__dropdown-item">
+                            <div class="navigation__dropdown-title">
+                                <a href="#" aria-haspopup="true">Company</a>
+                                <div class="navigation__dropdown-icon">
+                                    <img src="/resources/assets/images/icon-arrow-down.svg">
+                                </div>
                             </div>
-                        </div>
-                        <ul class="navigation__dropdown-list" role="list" aria-label="submenu">
-                            <li><a href="#" class="navigation__dropdown-link">History</a></li>
-                            <li><a href="#" class="navigation__dropdown-link">Our Team</a></li>
-                            <li><a href="#" class="navigation__dropdown-link">Blog</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
+                            <ul class="navigation__dropdown-list" role="list" aria-label="submenu">
+                                <li><a href="#" class="navigation__dropdown-link">History</a></li>
+                                <li><a href="#" class="navigation__dropdown-link">Our Team</a></li>
+                                <li><a href="#" class="navigation__dropdown-link">Blog</a></li>
+                            </ul>
+                        </li>
+                        <li class="navigation__dropdown-item"><a href="#">Careers</a></li>
+                        <li class="navigation__dropdown-item"><a href="#">About</a></li>
+                    </ul>
+                </div>
+
+
                 <div class="navigation__cta" style="max-width: 100%">
                     <button class="btn"><a href="#">Login</a></button>
                     <button class="btn btn-outline"><a href="#">Register</a></button>
                 </div>
-
             </nav>
+
         </div>
     </div>
 </header>
@@ -112,12 +117,12 @@
 
 <main>
     <section class="hero-section ">
-        <div class="container">
-            <div class="hero">
+        <div class="hero">
+            <div class="container">
                 <div class="hero__left">
                     <h1 class="hero__title">Make Remote Work</h1>
                     <p class="hero__subtitle">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-                    <button class="btn btn-outline">learn more</button>
+                    <button class="hero__btn btn btn-primary"><a href="">learn more</a></button>
                     <div class="hero__logo">
                         <img src="./resources/assets/images/client-databiz.svg" alt="">
                         <img src="./resources/assets/images/client-audiophile.svg" alt="">
@@ -126,12 +131,13 @@
                     </div>
 
                 </div>
-                <div class="hero__right">
-                    <picture >
-                        <source srcset="./resources/assets/images/image-hero-mobile.png" media="(max-width: 767px)">
-                        <img class="presentation__picture-img" src="./resources/assets/images/image-hero-desktop.png" alt="" >
-                    </picture>
-                </div>
+
+            </div>
+            <div class="hero__right">
+                <picture >
+                    <source srcset="./resources/assets/images/image-hero-mobile.png" media="(max-width: 1024px)">
+                    <img class="presentation__picture-img" src="./resources/assets/images/image-hero-desktop.png" alt="" >
+                </picture>
             </div>
         </div>
     </section>
