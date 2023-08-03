@@ -4,7 +4,7 @@ const primaryNav = document.querySelector(".navigation");
 const hamburgerIcon = document.getElementById("burgerIcon");
 const closeIcon = document.getElementById("burgerClose");
 const listNavigation = document.querySelectorAll(".navigation__dropdown-title");
-const dropdownList = document.querySelectorAll(".navigation__dropdown-list");
+const dropdownList = document.querySelector(".navigation__dropdown-list");
 
 /*listNavigation.addEventListener('click', () => {
     dropdownList.classList.toggle("hidden")

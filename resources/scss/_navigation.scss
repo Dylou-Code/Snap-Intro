@@ -72,8 +72,6 @@
       margin-top: 25px;
       margin-bottom: 25px;
       margin-left: 16px;
-
-
     }
 
     &__logo {
@@ -88,22 +86,6 @@
       display: none;
     }
 
-    /*propriété raccourci pour definir la marge de touts les coté*/
-    /*  inset: 7rem var(--size-400) auto;*/
-    /*max-width: 35rem;
-    margin-left: auto;*/
-
-
-    /*!*ombre légère sur le menu*!*!*/
-
-
-    /*&__dropdown-list {
-      display: grid;
-      gap: 15px;
-      text-align: center;
-      font-weight: var(--fw-bold);
-    }
-  */
     &[data-visible] {
       display: block;
     }
@@ -181,18 +163,12 @@
   /* Taille d'écran inférieure ou égale à 48em (1024 pixels) */
   @media (min-width: 64em) {
 
-
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 24px;
     width: 1000px;
-
-   /* &__wrapper {
-      width: 1000px;
-    }*/
 
     &__logo {
       display: none;
@@ -235,19 +211,42 @@
 
        &-list{
          position: absolute;
-         display: none;
+         background: var(--clr-neutral-500);
+         padding: 24px;
+         border-radius: 10px;
+         box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.15);
+         left: -30px;
+
+         &--company {
+           left: 160px;
+         }
+
+         li{
+           margin-top: 15px;
+         }
+
+         li:nth-child(1) {
+           margin-top: 0;
+         }
+      }
+
+      &-link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        img {
+          margin-right: var(--space-300);
+        }
       }
 
       &-list:hover{
 
       }
 
-     /*  &-list:hover {
-         background: red;
-         padding: 5px;
+       &-list:hover {
 
-      }*/
-
+      }
     }
   }
 
