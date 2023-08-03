@@ -1,0 +1,14 @@
+@mixin animate($animation,$duration){
+  animation: $animation $duration;
+}
+/*ajout d'un delay*/
+/*@mixin animate($animation,$duration, $delay: 0s){
+  animation: $animation $duration;
+}*/
+
+@mixin keyframes($name){
+  @keyframes #{$name}{
+    @content;
+  }
+}
+

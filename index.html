@@ -12,18 +12,19 @@
 </head>
 <body>
 <header class="header">
-    <div class="container">
+    <div class="navgation__wrapper">
+
         <div class="navigation__container">
             <a href="#" class="navigation__logo"><img src="./resources/assets/images/logo.svg" alt="Snap"></a>
           <!--  aria expanded est false car la navigation est fermer quand le visiteur est la-->
             <button class="navigation__mobile-toggle" aria-controls="primary-navigation" id="icons" aria-expanded="false">
                 <!--aria-hidden pour dire qu'il ne faut pas s'en occuper -->
-                <img class="navigation__mobile-hamburger" src="./resources/assets/images/icon-menu.svg" aria-hidden="true" alt="">
-                <!--<img class="navigation__mobile-close" src="./resources/assets/images/icon-close-menu.svg" alt="">-->
+                <img class="navigation__mobile-hamburger" id="burgerIcon" src="./resources/assets/images/icon-menu.svg" aria-hidden="true" alt="">
+                <img class="navigation__mobile-close hidden" id="burgerClose" src="./resources/assets/images/icon-close-menu.svg" alt="">
                <!--;la span est pour l'accesibilité-->
                 <span class="hidden">menu</span>
             </button>
-            <nav class="navigation">
+            <nav class="navigation ">
                 <div class="navigation__link">
                     <a href="#" class="navigation__logo navigation__logo--primary"><img src="./resources/assets/images/logo.svg" alt="Snap"></a>
                     <ul class="navigation__dropdown"  aria-label="primary" role="list"  id="primary-navigation">
@@ -84,9 +85,9 @@
                     <button class="btn btn-outline"><a href="#">Register</a></button>
                 </div>
             </nav>
-
         </div>
     </div>
+
 </header>
 
 <!--<header class="primary-header">
@@ -118,27 +119,28 @@
 <main>
     <section class="hero-section ">
         <div class="hero">
-            <div class="container">
+            <div class="hero__container">
                 <div class="hero__left">
                     <h1 class="hero__title">Make Remote Work</h1>
                     <p class="hero__subtitle">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-                    <button class="hero__btn btn btn-primary"><a href="">learn more</a></button>
+                    <button class="hero__btn btn btn-primary"><a href="">Learn more</a></button>
                     <div class="hero__logo">
                         <img src="./resources/assets/images/client-databiz.svg" alt="">
                         <img src="./resources/assets/images/client-audiophile.svg" alt="">
                         <img src="./resources/assets/images/client-meet.svg" alt="">
                         <img src="./resources/assets/images/client-maker.svg" alt="">
                     </div>
+                </div>
 
+                <div class="hero__right">
+                    <picture >
+                        <source srcset="./resources/assets/images/image-hero-mobile.png" media="(max-width: 1024px)">
+                        <img class="presentation__picture-img" src="./resources/assets/images/image-hero-desktop.png" alt="" >
+                    </picture>
                 </div>
 
             </div>
-            <div class="hero__right">
-                <picture >
-                    <source srcset="./resources/assets/images/image-hero-mobile.png" media="(max-width: 1024px)">
-                    <img class="presentation__picture-img" src="./resources/assets/images/image-hero-desktop.png" alt="" >
-                </picture>
-            </div>
+
         </div>
     </section>
 </main>
