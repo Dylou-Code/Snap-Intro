@@ -37,6 +37,10 @@
 
   &__subtitle{
     padding-top: var(--space-400);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-400);
+    color: var(--clr-neutral-600);
+    line-height: 28px;
   }
 
   &__btn {
@@ -64,6 +68,10 @@
 
     &__title {
       margin-top: 0;
+    }
+
+    &__subtitle {
+      font-size: var(--fs-500);
     }
 
     &__btn {
