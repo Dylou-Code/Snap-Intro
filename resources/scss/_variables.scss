@@ -35,17 +35,6 @@
   --space-700: 2.5rem;/*48*/
 }
 
-@mixin reset-list {
-  list-style: none;
-}
-
-@mixin horizontal-list {
-  @include reset-list;
-}
-
-nav ul {
-  @include horizontal-list;
-}
 
 body {
   display: flex;

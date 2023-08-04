@@ -120,7 +120,7 @@
   }
 
   @media (min-width: 64em) {
-    /* Vos styles pour les écrans de 1024 pixels ou moins */
+    /* 1024 pixels */
     &__container {
       margin: 0 auto;
       width: 950px;
@@ -156,8 +156,11 @@
           transform: translateX(0%);
         }
       }
-
       @include animate(slide-out, 2200ms);
+
+      picture {
+        margin-left: 45px;
+      }
     }
   }
 

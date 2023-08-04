@@ -34,6 +34,8 @@
     }
     @include animate(slide-out, 550ms);
 
+
+
    /* &__notVisible {
       @include keyframes(slide-nav-out){
         from {
@@ -145,6 +147,17 @@
         & a:hover, a:focus {
           color: var(--clr-neutral-700);
         }
+
+        /*animation*/
+        @include keyframes(slide-bottom){
+          from {
+            transform: translateY(-5%);
+          }
+          to {
+            transform: translateY(0%);
+          }
+        }
+        @include animate(slide-bottom, 400ms);
       }
 
       &-link {
@@ -244,6 +257,21 @@
          li:nth-child(1) {
            margin-top: 0;
          }
+
+         /*animation*/
+         /*animation*/
+         @include keyframes(appear){
+           from {
+
+             opacity: 0.5;
+
+           }
+           to {
+             opacity: 1;
+
+           }
+         }
+         @include animate(appear, 250ms);
       }
 
       &-link {

@@ -13,7 +13,6 @@
 <body>
 <header class="header">
     <div class="navgation__wrapper">
-
         <div class="navigation__container">
             <a href="#" class="navigation__logo"><img src="./resources/assets/images/logo.svg" alt="Snap"></a>
           <!--  aria expanded est false car la navigation est fermer quand le visiteur est la-->
@@ -32,7 +31,8 @@
                             <div class="navigation__dropdown-title" id="dropdown">
                                 <a href="#" aria-haspopup="true">Features</a>
                                 <div class="navigation__dropdown-icon" id="dropdown-icon">
-                                    <img src="/resources/assets/images/icon-arrow-down.svg">
+                                    <img class="arrow-down" src="/resources/assets/images/icon-arrow-down.svg">
+                                    <img class="arrow-up hidden" src="/resources/assets/images/icon-arrow-up.svg">
                                 </div>
 
                             </div>
@@ -87,34 +87,7 @@
             </nav>
         </div>
     </div>
-
 </header>
-
-<!--<header class="primary-header">
-    <div class="container">
-        <div class="nav-wrapper">
-            <a href="#"><img src="./images/logo.svg" alt="Manage"></a>
-            &lt;!&ndash;aria expanded est false car la navigation est fermer quand le visiteur est la&ndash;&gt;
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-                &lt;!&ndash;aria-hidden pour dire qu'il ne faut pas s'en occuper &ndash;&gt;
-                <img class="icon-hamburger" src="./images/icon-hamburger.svg" aria-hidden="true" alt="">
-                <img class="icon-close" src="./images/icon-close.svg" alt="">
-                &lt;!&ndash;la span est pour l'accesibilité&ndash;&gt;
-                <span class="visually-hidden">menu</span>
-            </button>
-            <nav class="primary-navigation">
-                <ul aria-label="primary" role="list" class="nav-list"  id="primary-navigation">
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Community</a></li>
-                </ul>
-            </nav>
-            <button class="button | display-sm-none display-md-inline-flex">Get Started</button>
-        </div>
-    </div>
-</header>-->
 
 <main>
     <section class="hero-section ">
@@ -138,13 +111,11 @@
                         <img class="presentation__picture-img" src="./resources/assets/images/image-hero-desktop.png" alt="" >
                     </picture>
                 </div>
-
             </div>
-
         </div>
     </section>
 </main>
 
-<script type="module" defer src="/main.js"></script>
+<script type="module" defer src="resources/js/main.js"></script>
 </body>
 </html>

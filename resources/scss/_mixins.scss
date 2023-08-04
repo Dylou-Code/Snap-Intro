@@ -12,3 +12,16 @@
   }
 }
 
+@mixin reset-list {
+  list-style: none;
+}
+
+@mixin horizontal-list {
+  @include reset-list;
+}
+
+nav ul {
+  @include horizontal-list;
+}
+
+
