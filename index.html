@@ -12,17 +12,20 @@
 </head>
 <body>
 <header class="header">
-    <div class="navgation__wrapper">
+
         <div class="navigation__container">
-            <a href="#" class="navigation__logo"><img src="./resources/assets/images/logo.svg" alt="Snap"></a>
-          <!--  aria expanded est false car la navigation est fermer quand le visiteur est la-->
-            <button class="navigation__mobile-toggle" aria-controls="primary-navigation" id="icons" aria-expanded="false">
-                <!--aria-hidden pour dire qu'il ne faut pas s'en occuper -->
-                <img class="navigation__mobile-hamburger" id="burgerIcon" src="./resources/assets/images/icon-menu.svg" aria-hidden="true" alt="">
-                <img class="navigation__mobile-close hidden" id="burgerClose" src="./resources/assets/images/icon-close-menu.svg" alt="">
-               <!--;la span est pour l'accesibilité-->
-                <span class="hidden">menu</span>
-            </button>
+            <div class="navigation__mobile">
+                <a href="#" class="navigation__logo"><img src="./resources/assets/images/logo.svg" alt="Snap"></a>
+                <!--  aria expanded est false car la navigation est fermer quand le visiteur est la-->
+                <button class="navigation__mobile-toggle" aria-controls="primary-navigation" id="icons" aria-expanded="false">
+                    <!--aria-hidden pour dire qu'il ne faut pas s'en occuper -->
+                    <img class="navigation__mobile-hamburger" id="burgerIcon" src="./resources/assets/images/icon-menu.svg" aria-hidden="true" alt="">
+                    <img class="navigation__mobile-close hidden" id="burgerClose" src="./resources/assets/images/icon-close-menu.svg" alt="">
+                    <!--;la span est pour l'accesibilité-->
+                    <span class="hidden">menu</span>
+                </button>
+            </div>
+
             <nav class="navigation ">
                 <div class="navigation__link">
                     <a href="#" class="navigation__logo navigation__logo--primary"><img src="./resources/assets/images/logo.svg" alt="Snap"></a>
@@ -86,7 +89,7 @@
                 </div>
             </nav>
         </div>
-    </div>
+
 </header>
 
 <main>
