@@ -29,7 +29,7 @@
                     <a href="#" class="navigation__logo navigation__logo--primary"><img src="./resources/assets/images/logo.svg" alt="Snap"></a>
                     <ul class="navigation__dropdown"  aria-label="primary" role="list"  id="primary-navigation">
                         <li class="navigation__dropdown-item">
-                            <div class="navigation__dropdown-title">
+                            <div class="navigation__dropdown-title" id="dropdown">
                                 <a href="#" aria-haspopup="true">Features</a>
                                 <div class="navigation__dropdown-icon" id="dropdown-icon">
                                     <img src="/resources/assets/images/icon-arrow-down.svg">
@@ -37,7 +37,7 @@
 
                             </div>
 
-                            <ul class="navigation__dropdown-list" role="list" aria-label="submenu">
+                            <ul class="navigation__dropdown-list hidden" role="list" aria-label="submenu">
                                 <li><a href="#" class="navigation__dropdown-link">
                                     <img src="/resources/assets/images/icon-todo.svg">
                                     Todo List
@@ -62,13 +62,13 @@
                             </ul>
                         </li>
                         <li class="navigation__dropdown-item">
-                            <div class="navigation__dropdown-title">
+                            <div class="navigation__dropdown-title" id="dropdown">
                                 <a href="#" aria-haspopup="true">Company</a>
                                 <div class="navigation__dropdown-icon">
                                     <img src="/resources/assets/images/icon-arrow-down.svg">
                                 </div>
                             </div>
-                            <ul class="navigation__dropdown-list navigation__dropdown-list--company" role="list" aria-label="submenu">
+                            <ul class="navigation__dropdown-list navigation__dropdown-list--company hidden" role="list" aria-label="submenu">
                                 <li><a href="#" class="navigation__dropdown-link">History</a></li>
                                 <li><a href="#" class="navigation__dropdown-link">Our Team</a></li>
                                 <li><a href="#" class="navigation__dropdown-link">Blog</a></li>
