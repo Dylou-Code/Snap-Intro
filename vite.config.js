@@ -1,5 +1,5 @@
 // vite.config.js
-export default {
-
-    base: "/Snap-Intro/"
-}
+import { defineConfig } from 'vite'
+export default defineConfig({
+   base: '/'
+})
