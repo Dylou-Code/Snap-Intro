@@ -16,7 +16,6 @@ navToggle.addEventListener('click', () => {
 })
 
 
-
 dropdown.forEach(dropdownItem => {
     const dropdownTitle = dropdownItem.querySelector(".navigation__dropdown-title");
     const dropdownList = dropdownItem.querySelector(".navigation__dropdown-list");
