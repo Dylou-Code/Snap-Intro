@@ -3,10 +3,7 @@ const navToggle = document.querySelector(".navigation__mobile-toggle");
 const primaryNav = document.querySelector(".navigation");
 const hamburgerIcon = document.getElementById("burgerIcon");
 const closeIcon = document.getElementById("burgerClose");
-const listNavigation = document.querySelector(".navigation__dropdown-title");
-const arrowUpIcon = document.querySelector(".arrow-up");
-const arrowDownIcon = document.querySelector(".arrow-down");
-const dropdownList = document.querySelector(".navigation__dropdown-list");
+const dropdown = document.querySelectorAll(".navigation__dropdown-item");
 
 navToggle.addEventListener('click', () => {
     hamburgerIcon.classList.toggle('hidden');
@@ -17,9 +14,21 @@ navToggle.addEventListener('click', () => {
     primaryNav.toggleAttribute("data-visible");
     primaryHeader.toggleAttribute("data-overlay");
 })
-listNavigation.addEventListener('click', () => {
-    dropdownList.classList.toggle("hidden")
-    arrowUpIcon.classList.toggle('hidden');
-    arrowDownIcon.classList.toggle('hidden');
-    /*dropdownList.style.animation = "slide-bottom ";*/
+
+
+
+dropdown.forEach(dropdownItem => {
+    const dropdownTitle = dropdownItem.querySelector(".navigation__dropdown-title");
+    const dropdownList = dropdownItem.querySelector(".navigation__dropdown-list");
+    const navIcons = dropdownItem.querySelectorAll(".navigation__dropdown-icon");
+
+    dropdownTitle.addEventListener('click', () => {
+        dropdownList.classList.toggle("hidden");
+        navIcons.forEach(icon => {
+            const arrowUpIcon = icon.querySelector(".arrow-up");
+            const arrowDownIcon = icon.querySelector(".arrow-down");
+            arrowUpIcon.classList.toggle('hidden');
+            arrowDownIcon.classList.toggle('hidden');
+        })
+    });
 });
