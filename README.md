@@ -19,6 +19,6 @@ Cette section d'intro est un challenge du site [Frontend Mentor](https://www.fro
     - Variables
     - Mixins
 - Media Queries
-- - Mobile-first workflow
+- Mobile-first workflow
 
 
